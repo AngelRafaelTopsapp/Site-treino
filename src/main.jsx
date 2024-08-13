@@ -8,6 +8,7 @@ import {
   RouterProvider,
   Navigate,
   HashRouter,
+  BrowserRouter
 } from "react-router-dom";
 
 import Home from "./routes/Home.jsx";
