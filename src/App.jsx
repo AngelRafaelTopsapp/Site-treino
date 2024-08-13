@@ -1,35 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="flex flex-col min-h-screen bg-slate-100">
+      <header className="bg-cyan-200 w-full py-4">
+        <h1 className="text-3xl font-bold text-center text-gray-800">
+          React Router
+        </h1>
+      </header>
+      <Navbar />
+      <main className="flex-1 p-4">
+        <Outlet />
+      </main>
+      <footer className="bg-gray-800 text-white py-4 text-center">
+        <p>&copy; 2024 Your Company</p>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
