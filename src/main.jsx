@@ -1,9 +1,8 @@
-import React, { Children } from "react";
+import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-
-import { createBrowserRouter,Navigate, BrowserRouter, HashRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 
 import Home from "./routes/Home.jsx";
 import Contact from "./routes/Contact.jsx";
@@ -25,17 +24,14 @@ const router = createBrowserRouter([
         path: "contact",
         element: <Contact />,
       },
-
       {
         path: "video",
         element: <Video />,
       },
-
       {
-        path: "/contact/:id",
+        path: "contact/:id",
         element: <ContactDetails />,
       },
-
       {
         path: "oldcontact",
         element: <Navigate to="/contact" />,
@@ -46,8 +42,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <HashRouter>
-      <RouterProvider router={router} />
-    </HashRouter>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import React from "react";
 const Contact = () => {
   return (
     <div className="flex flex-col gap-10 items-center justify-center h-screen px-4 py-6">
