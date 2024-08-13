@@ -1,15 +1,15 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
 import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
-
+import App from "./App.jsx";
 import Home from "./routes/Home.jsx";
 import Contact from "./routes/Contact.jsx";
 import ErrorPage from "./routes/ErrorPage.jsx";
 import ContactDetails from "./routes/ContactDetails.jsx";
 import Video from "./routes/VideoModal.jsx";
+import "./index.css";
 
+// Criação das rotas com createBrowserRouter
 const router = createBrowserRouter([
   {
     path: "/",
